@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://yang-liang.github.io/sitemap.xml
