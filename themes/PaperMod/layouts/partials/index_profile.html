@@ -1,0 +1,103 @@
+ç<div class="profile-container" style="display: flex; align-items: flex-start; gap: 20px;">
+    <!-- Left Side: Profile Image -->
+    <div class="profile-image">
+        {{- with site.Params.profileMode }}
+        {{- if .imageUrl -}}
+            <img draggable="false" src="{{ .imageUrl | absURL }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
+                height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}" />
+        {{- end }}
+        {{- end }}
+            <!-- Social Icons -->
+            <div class="social-section" style="margin-top: 0px;">
+                {{- partial "social_icons.html" -}}
+            </div>        
+    </div>
+
+    <!-- Right Side: Profile Info, Current Positions, and Social Icons -->
+    <div class="profile-info">
+        <h1>{{ site.Params.profileMode.title | default site.Title | markdownify }}</h1>
+        <span>{{ site.Params.profileMode.subtitle | markdownify }}</span>
+
+        <!-- Current Positions -->
+        <div class="current-positions" style="margin-top: 30px;">
+            <h2>Current Positions</h2>
+            <ul>
+                <li>Assistant Professor – <a href="https://economics.sdsu.edu/faculty">SDSU Economics</a></li>
+                <li>Assistant Director – <a href="https://cheps.sdsu.edu">CHEPS</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Now add the new sections below the profile -->
+<div class="papers">
+    <h2>Working Papers</h2>
+    <div class="paper-list">
+        {{ range .Site.Params.workingPapers }}
+        <li class="paper-item">
+            <a href="{{ .link }}" class="paper-title">{{ .title }}</a>
+            <p class="paper-authors"> {{ .authors }}</p>
+        </li>
+        {{ end }}
+    </div>
+</div>
+
+<div class="publications">
+    <h2>Accepted Publications</h2>
+    <div class="publication-list">
+        {{ range .Site.Params.acceptedPublications }}
+        <div class="publication-item">
+            <a href="{{ .link }}" class="publication-title">{{ .title }}</a>
+            <p class="publication-authors"> {{ .authors }}</p>
+            <span class="journal-info">{{ .journal }}</span>, {{ .year }}
+        </div>
+        {{ end }}
+    </div>
+</div>
+
+<div class="books">
+    <h2>Book Chapters, Policy Work, and Other Publications</h2>
+    <div class="book-list">
+        {{ range .Site.Params.bookChaptersPolicyWork }}
+        <div class="book-item">
+            <a href="{{ .link }}" class="book-title">{{ .title }}</a>
+            <p class="book-authors">{{ .authors }}</p>
+            <span class="book-publication">{{ .publication }}</span>, {{ .year }}
+        </div>
+        {{ end }}
+    </div>
+</div>
+
+<script>
+    function toggleBio() {
+        const bioContent = document.getElementById('bioContent');
+        bioContent.style.display = bioContent.style.display === 'none' ? 'block' : 'none';
+    }
+</script>
+
+<!-- <div class="theme-toggle-container">
+    <button id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <svg id="theme-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" fill="currentColor"></path>
+        </svg>
+    </button>
+</div>
+
+
+<script>
+    // Function to toggle between light and dark theme
+    function toggleTheme() {
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+    }
+
+    // Set the initial theme on page load
+    (function() {
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+</script>
+
+ -->

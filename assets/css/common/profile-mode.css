@@ -1,0 +1,151 @@
+/* Center the main content area */
+.main {
+    max-width: 80%; /* Adjust this value to control the maximum width of the content */
+    margin: 0 auto; /* Center the content */
+    padding: 30px; /* Add padding to ensure content doesn't touch screen edges */
+}
+
+/* Center the profile container */
+.profile-container {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: flex-start; /* Align items at the top */
+    width: 80%; /* Adjust the width to use more space */
+    margin: 0 auto; /* Center the profile container */
+    gap: 30px; /* Space between the image and profile info */
+    max-width: 1400px; /* Limit maximum width to prevent stretching */
+    padding: 30px; /* Add padding to ensure content doesn't touch screen edges */
+}
+
+/* Ensure the image is properly sized */
+.profile-image img {
+    border-radius: 20%;
+    max-width: 180px; /* Adjust the image size */
+    height: auto;
+}
+
+/* Allow the profile-info to take up more space */
+.profile-info, .papers, .publications, .books {
+    flex: 1; /* Allow this section to take up the remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align items to the top */
+}
+
+/* Control the font size and margins for the heading and subtitle */
+.profile-info h1 {
+    font-size: 36px;
+    margin: 0; /* Remove default margin */
+}
+
+.profile-info span.subtitle {
+    font-size: 16px; /* Ensure the subtitle font size is consistent */
+    margin-bottom: 20px; /* Space below the subtitle */
+    display: block; /* Ensures that the subtitle takes up the correct space */
+}
+
+/* Center the papers and publications sections */
+.papers, .publications, .books {
+    width: 80%; /* Adjust the width to use more space */
+    margin: 0 auto; /* Center the profile container */
+    gap: 30px; /* Space between the image and profile info */
+    padding: 30px; /* Add padding to ensure content doesn't touch screen edges */
+}
+
+/* Current positions styling */
+.current-positions {
+    font-size: 16px;
+    margin-top: 20px; /* Space between social icons and current positions */
+}
+
+.current-positions ul {
+    padding: 0; /* Remove default padding from the list */
+    list-style: none; /* Remove bullet points */
+}
+
+.current-positions a {
+    color: var(--sdsu); /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.current-positions a:hover {
+    color: var(--sdsu); /* Hover color */
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* Social icons styling */
+.social-icons {
+    margin-top: 15px; /* Adjust spacing between the bio and social icons */
+    display: flex;
+    gap: 12px; /* Space between each social icon */
+    justify-content: flex-start; /* Align icons to the left */
+}
+
+/* Theme toggle container styling */
+.theme-container {
+    margin: 10px 0;
+    text-align: right; /* Align the toggle to the right of the header */
+}
+
+#theme-toggle {
+    background-color: var(--entry);
+    border: 1px solid var(--border);
+    color: var(--primary);
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#theme-toggle:hover {
+    background-color: var(--sdsu); /* Adjust colors to match your theme */
+    color: #fff;
+}
+
+/* Style for Media Coverage Section */
+.paper-list, .publication-list, .book-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.paper-item, .publication-item, .book-list {
+    margin-bottom: 15px;
+}
+
+.paper-title, .publication-title, .book-title {
+    font-weight: bold;
+    /* color: #1a0dab; */
+    color: #035fbb;
+    text-decoration: none;
+}
+
+.paper-title:hover, .publication-title:hover, .book-title:hover {
+    text-decoration: underline;
+}
+
+.paper-authors, .publication-authors, .book-authors {
+    /* font-style: italic; */
+    color: #333;
+}
+
+.media-coverage {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.media-link {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.media-link:hover {
+    text-decoration: underline;
+}
+
+.journal-info, .book-publication {
+    font-style: italic;
+    font-weight: bold;
+    color: #000000;
+    font-size: 0.9em;
+}
