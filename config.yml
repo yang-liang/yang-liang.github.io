@@ -1,0 +1,213 @@
+baseURL: "http://yang-liang.github.io/"
+title: Yang Liang
+pagination:
+  pagerSize: 20
+theme: PaperMod
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+
+taxonomies:
+  tag: tags
+
+menu:
+  main:
+    - name: Papers
+      url: papers/
+      weight: 5
+    - name: Teaching
+      url: courses/
+      weight: 2
+
+params:
+  description: "Yang Liang's personal website"
+  author: Yang Liang
+  # googleAnalyticsID: "G-XXXXX"
+  DateFormat: "October 2024"
+  defaultTheme: light
+  hideFooter: true
+  disableThemeToggle: false
+  ShowShareButtons: false
+  ShowReadingTime: false
+  disableSpecial1stPost: true
+  disableAnchoredHeadings: true
+  ShowPostNavLinks: false
+  ShowBreadCrumbs: false
+  ShowCodeCopyButtons: true
+  ShowAllPagesInArchive: false
+  MainSections: ["research","teaching","misc."]
+  ShowToc: false
+  disableScrollToTop: true
+  TocOpen: true
+  ShowWordCount: false
+  UseHugoToc: true
+  comments: false
+  math: true
+  profileMode:
+    enabled: true
+    title: Yang Liang
+    subtitle: "Welcome to my website! I am an applied microeconomist with research interests in public policy analysis across the fields of labor economics, health economics, and international economics. I've been an assistant professor of economics at San Diego State University since 2018 and assistant director for the Center for Health Economics and Policy Studies since 2021."
+    imageUrl: "/profile-color.JPG"
+    imageWidth: 160
+    imageHeight: 210
+    imageTitle: Yang Liang
+
+  workingPapers:
+    - title: "The Effect of E-Cigarette Flavor Restrictions on Tobacco Use"
+      authors: "w. Chad Cotti, Charles Courtemanche, Johanna Catherine Maclean, Erik Nesson, and Joseph J. Sabia"
+      year: 2024
+      link: "https://example.com/paper1"
+      mediaCoverage:
+        - name: "Economist"
+          link: "https://economist.com/article1"
+    - title: "The Effect of E-cigarette Taxes on Substance Use"
+      authors: "w. Dhaval M. Dave, Johanna Catherine Maclean, Caterina Muratori, and Joseph J. Sabia"
+      year: 2023
+    - title: "Can Anti-Vaping Policies Curb Drinking Externalities? Evidence from E-Cigarette Taxation and Traffic Fatalities"
+      authors: "w. Dhaval M. Dave, Johanna Catherine Maclean, Joseph J. Sabia, and Matthew Braaksma"
+      year: 2023
+      mediaCoverage:
+        - name: "Economist"
+          link: "https://economist.com/article2"
+    - title: "The Effects of Recreational Marijuana Legalization on Employment and Earnings"
+      authors: "w. Dhaval M. Dave, Caterina Muratori, and Joseph J. Sabia"
+      year: 2023
+      mediaCoverage:
+        - name: "Cato"
+          link: "https://cato.org/article"
+        - name: "Business Insider"
+          link: "https://businessinsider.com/article3"
+        - name: "Marijuana Moment"
+          link: "https://marijuanamoment.com/article"
+        - name: "NORML"
+          link: "https://norml.org/article"
+    - title: "Follow Thy Neighbor: The Role of First Exporters"
+      authors: "w. Hao T. Fe and Mary E. Lovely"
+
+  acceptedPublications:
+    - title: "Do E-Cigarette Retail Licensure Laws Reduce Tobacco Use?"
+      authors: "w. Charles Courtemanche, Johanna Catherine Maclean, Caterina Muratori, and Joseph J. Sabia"
+      journal: "Journal of Health Economics"
+      year: 2024
+      link: "https://example.com/paper2"      
+    - title: "Can Exports Be Pain Relievers? The Effect of Exports on Workplace Safety and Health"
+      authors: "w. Ling Li"
+      journal: "Review of International Economics"
+      year: 2024
+    - title: "Recreational Marijuana Laws and Teen Marijuana Use, 1993-2021"
+      authors: "w. Mark Anderson, Hao T. Fe, and Joseph J. Sabia"
+      journal: "JAMA Psychiatry"
+      year: 2024
+    - title: "Recreational Marijuana Legalization and Workplace Injuries Among Younger Workers"
+      authors: "w. Ling Li, Joseph J. Sabia, and Dhaval M. Dave"
+      journal: "JAMA Health Forum"
+      year: 2024
+      mediaCoverage:
+        - name: "U.S. News"
+          link: "https://usnews.com/article4"
+    - title: "Targeted Liberalization: China’s Foreign Investment Regulation Reform and Its Post-WTO-Accession Export Surge"
+      authors: "w. Mary E. Lovely and Hongsheng Zhang"
+      journal: "Review of International Economics"
+      year: 2024
+    - title: "Mandatory Seatbelt Laws and Traffic Fatalities: A Reassessment"
+      authors: "w. D. Mark Anderson and Joseph J. Sabia"
+      journal: "Journal of Applied Econometrics"
+      year: 2024
+    - title: "Have Recreational Marijuana Laws Undermined Public Health Progress on Adult Tobacco Use?"
+      authors: "w. Dhaval M. Dave, Michael F. Pesko, Serena Phillips, and Joseph J. Sabia"
+      journal: "Journal of Health Economics"
+      year: 2023
+      mediaCoverage:
+        - name: "MarketWatch"
+          link: "https://marketwatch.com/article5"
+    - title: "Association Between State Antibullying Policies and Suicidal Behaviors Among Lesbian, Gay, Bisexual, and Questioning Youth"
+      authors: "w. Daniel I. Rees, Joseph J. Sabia, and Cooper Smiley"
+      journal: "JAMA Pediatrics"
+      year: 2023
+      mediaCoverage:
+        - name: "Medscape"
+          link: "https://medscape.com/article"
+    - title: "Job Creation and Job Destruction: The Effect of Trade Shocks on U.S. Manufacturing Employment"
+      authors: ""
+      journal: "The World Economy"
+      year: 2021
+    - title: "Offshoring, Exports, and Employment: Theory and Evidence from Korean Firms"
+      authors: "w. Priyaranjan Jha, Jae Yoon Lee, and Devashish Mitra"
+      journal: "The World Economy"
+      year: 2021
+    - title: "Economic Geography and Inequality in China: Did Improved Market Access Widen Spatial Wage Differences?"
+      authors: "w. Mary E. Lovely and Hongsheng Zhang"
+      journal: "China Economic Review"
+      year: 2019
+  
+  bookChaptersPolicyWork:
+    - title: "The Effects of Recreational Marijuana Legalization on Employment and Earnings"
+      authors: "w. Dhaval M. Dave, Cateria Muratori, and Joseph J. Sabia"
+      publication: "Research Briefs in Economics Policy NO. 347, CATO Institute"
+      year: 2023
+    - title: "Trump Tariffs Primarily Hit Multinational Supply Chains, Harm U.S. Technology Competitiveness"
+      authors: "w. Mary E. Lovely"
+      publication: "Policy Brief 18-12, Washington: Peterson Institute for International Economics"
+      year: 2018
+      mediaCoverage:
+        - name: "Bloomberg"
+          link: "https://bloomberg.com/article"
+        - name: "Business Insider"
+          link: "https://businessinsider.com/article"
+        - name: "Forbes"
+          link: "https://forbes.com/article"
+        - name: "DisCo"
+          link: "https://disco.com/article"
+        - name: "The Economist"
+          link: "https://economist.com/article"
+        - name: "NY Times"
+          link: "https://nytimes.com/article"
+    - title: "They Saved the Worst for Last: Why Trump's Impending December Tariffs on China Should Be Rolled Back"
+      authors: "w. Mary E. Lovely"
+      publication: "Trade and Investment Policy Watch, Washington: Peterson Institute for International Economics"
+      year: 2019
+    - title: "State Enterprise Reform in China: Grasp or Release?"
+      authors: "w. Mary E. Lovely"
+      publication: "Wei-Chiao Huang and Huizhong Zhou (eds.), The Impact of China's Rise on the Pacific and the World, W.E. Upjohn Institute for Employment Research, Kalamazoo, MI"
+      year: 2018
+    - title: "¿Necesita México libre comercio con Estados Unidos?"
+      authors: "w. James Gerber"
+      publication: "Estudios Fronterizos"
+      year: 2022
+
+  socialIcons:
+    - name: CV
+      url: cv_liang_sdsu.pdf
+    - name: Google Scholar
+      url: "https://scholar.google.com/citations?user=BVCUJj4AAAAJ&hl=en&oi=ao"
+    - name: Email
+      url: "mailto:yliangecon@gmail.com"
+    - name: X
+      url: "https://x.com/yangliangecon"
+
+  assets:
+    favicon: "/favicon.ico"
+    favicon16x16: "/favicon16.png"
+    favicon32x32: "/favicon32.png"
+    apple_touch_icon: "/apple-touch-icon.png"
+
+  cover:
+    hiddenInList: false
+    hiddenInSingle: true
+
+  label:
+    text: "Yang Liang"
+    icon: favicon.ico
+    iconHeight: 18
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    guessSyntax: true
+    style: autumn
+  tableOfContents:
+    endLevel: 2
+    ordered: false
+    startLevel: 2
