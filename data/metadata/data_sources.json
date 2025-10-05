@@ -1,0 +1,35 @@
+{
+  "download_date": "2025-10-05T05:09:21.030992",
+  "data_sources": [
+    {
+      "name": "San Diego Shelter Locations",
+      "source": "San Diego Open Data Portal / Public Records",
+      "description": "Locations of homeless shelters and service providers in San Diego",
+      "geographic_coverage": "San Diego County",
+      "includes_coordinates": true,
+      "file": "sd_shelter_locations.csv"
+    },
+    {
+      "name": "Point-in-Time Count Data",
+      "source": "San Diego Regional Task Force on Homelessness",
+      "description": "Annual homeless census data by geographic region",
+      "geographic_coverage": "San Diego County regions",
+      "includes_coordinates": true,
+      "file": "sd_pit_count_2024.csv"
+    },
+    {
+      "name": "Eviction Data",
+      "source": "San Diego Court Records / Housing Authority",
+      "description": "Eviction filings and judgments by ZIP code",
+      "geographic_coverage": "San Diego County ZIP codes",
+      "includes_coordinates": true,
+      "file": "sd_eviction_data_2024.csv"
+    }
+  ],
+  "notes": [
+    "All coordinates are in WGS84 (EPSG:4326) format",
+    "Data represents sample/demonstration datasets",
+    "For production use, connect to live APIs from San Diego Open Data Portal",
+    "Some data may be anonymized or aggregated for privacy"
+  ]
+}

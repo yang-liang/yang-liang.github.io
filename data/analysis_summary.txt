@@ -1,0 +1,15 @@
+San Diego Homelessness Data Analysis Report
+============================================================
+
+SHELTER CAPACITY
+Total Shelters: 5
+Total Capacity: 1,220 beds
+
+HOMELESS POPULATION
+Total: 2,594
+Sheltered: 869
+Unsheltered: 1,725
+
+EVICTIONS
+Total Filings: 166
+Total Judgments: 115
