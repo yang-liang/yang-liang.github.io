@@ -1,6 +1,0 @@
-region_name,region_code,year,unsheltered_count,sheltered_count,total_count,latitude,longitude,area_sq_miles
-Downtown San Diego,DT,2024,845,423,1268,32.7157,-117.1611,1.7
-East Village,EV,2024,312,156,468,32.7089,-117.1434,0.8
-North Park,NP,2024,178,89,267,32.7427,-117.1294,2.1
-Pacific Beach,PB,2024,156,34,190,32.7942,-117.2324,2.8
-Midway District,MD,2024,234,167,401,32.7533,-117.2069,3.2
