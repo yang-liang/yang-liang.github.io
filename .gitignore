@@ -2,35 +2,3 @@
 .Rhistory
 .RData
 .Ruserdata
-
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-venv/
-env/
-ENV/
-*.egg-info/
-
-# Data files - exclude large files but allow sample data
-# Uncomment the lines below if you want to exclude data files:
-# data/raw/*.csv
-# data/processed/*.csv
-
-# Keep directory structure and metadata
-!data/metadata/
-!data/DOWNLOAD_SUMMARY.txt
-!data/analysis_summary.txt
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# OS
-.DS_Store
-Thumbs.db
-
