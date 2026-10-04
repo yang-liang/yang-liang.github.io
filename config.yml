@@ -73,6 +73,7 @@ params:
       journal: "Journal of Urban Economics"
       year: 2025
       url: "https://doi.org/10.1016/j.jue.2025.103813"
+      code: "https://github.com/yang-liang/FeLiangLovely"
 
     - title: "The Effect of E-Cigarette Flavor Restrictions on Tobacco Use"
       authors: "w. Chad Cotti, Charles Courtemanche, Johanna Catherine Maclean, Erik Nesson, and Joseph J. Sabia"
