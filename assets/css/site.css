@@ -1,0 +1,112 @@
+/* Homepage stylesheet (layouts/index.html).
+   Layout: photo + links pinned in a left column; name, roles and papers on the right.
+   Type: Optima for name, headings and small labels; Libertinus Serif for the papers.
+   Optima ships with Apple devices only; elsewhere it falls back to Libertinus Sans. */
+
+:root {
+  color-scheme: light;
+  --bg: #ffffff;
+  --fg: #1d1d1f;
+  --muted: #6e6e73;
+  --faint: #86868b;
+  --rule: #e5e5ea;
+  --link: #1d4e89;              /* navy */
+  --serif: "Libertinus Serif", "Linux Libertine", Georgia, serif;
+  --optima: Optima, Candara, "Libertinus Sans", "Linux Biolinum", sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--serif);
+  font-size: .9375rem;
+  line-height: 1.38;
+  padding-inline: 24px;
+  padding-block: 40px 56px;
+}
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: .15em; text-decoration-thickness: 1px; }
+a:focus-visible, summary:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; border-radius: 2px; }
+h1, h2, p { margin: 0; }
+ol { list-style: none; margin: 0; padding: 0; }
+
+/* ---------- layout ---------- */
+.wrap {
+  max-width: 56rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 9.5rem minmax(0, 1fr);
+  grid-template-areas: "side head" "side main";
+  column-gap: 2.5rem;
+  row-gap: 1.6rem;
+  align-items: start;
+}
+
+/* ---------- left column ---------- */
+.side { grid-area: side; position: sticky; top: 40px; display: grid; gap: .9rem; }
+.photo { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; border-radius: 16px; }
+.icons { display: flex; flex-direction: column; gap: .35rem; }
+.icons a { display: inline-flex; align-items: center; gap: .4rem; color: var(--muted); font-family: var(--optima); font-size: .86rem; }
+.icons a:hover { color: var(--link); text-decoration: none; }
+.ico, .ico svg { display: inline-flex; width: .95rem; height: .95rem; flex: none; }
+
+/* ---------- name and roles ---------- */
+.head { grid-area: head; display: grid; gap: .12rem; min-width: 0; padding-bottom: 1.1rem; border-bottom: 1px solid var(--rule); }
+.head h1 { font-family: var(--optima); font-weight: 400; font-size: 1.75rem; line-height: 1.1; letter-spacing: .01em; margin-bottom: .25rem; }
+.role { color: var(--muted); font-size: .9rem; }
+
+/* ---------- papers ---------- */
+main { grid-area: main; display: grid; gap: 1.9rem; min-width: 0; }
+.list h2 { font-family: var(--optima); font-weight: 500; font-size: 1.2rem; line-height: 1.2; margin-bottom: .6rem; }
+.list ol { display: grid; gap: .62rem; }
+.entry { display: grid; grid-template-columns: 2.4rem minmax(0, 1fr); column-gap: .4rem; }
+.no-year .entry { grid-template-columns: minmax(0, 1fr); }
+.year { color: var(--faint); font-family: var(--optima); font-size: .8rem; padding-top: .12rem; font-variant-numeric: tabular-nums; }
+.body { display: grid; min-width: 0; }
+.title { color: var(--fg); font-size: .98rem; line-height: 1.28; justify-self: start; }
+.title:hover { color: var(--link); }
+.authors { color: var(--muted); font-size: .85rem; line-height: 1.3; }
+.line { display: flex; flex-wrap: wrap; align-items: baseline; gap: .1rem .5rem; font-size: .85rem; line-height: 1.3; }
+.venue { font-style: italic; }
+
+/* Code / Press tags */
+.tags { display: inline-flex; flex-wrap: wrap; align-items: baseline; gap: .1rem .4rem; font-family: var(--optima); font-size: .72rem; }
+.tag, .press summary { color: var(--link); border: 1px solid var(--rule); border-radius: 3px; padding: 0 .45rem; line-height: 1.45; letter-spacing: .02em; }
+.tag:hover, .press summary:hover, .press[open] summary { border-color: var(--link); text-decoration: none; }
+.press { display: contents; }
+.press summary { cursor: pointer; list-style: none; }
+.press summary::-webkit-details-marker { display: none; }
+.outlets { display: inline-flex; flex-wrap: wrap; gap: 0 .55rem; font-size: .78rem; }
+.outlets a + a::before { content: "·"; color: var(--faint); margin-right: .55rem; display: inline-block; }
+
+.foot { color: var(--faint); font-family: var(--optima); font-size: .75rem; }
+
+/* ---------- tablets and phones: photo beside name, links in a row ---------- */
+@media (max-width: 720px) {
+  body { padding-inline: 16px; padding-block: 24px 40px; }
+  .wrap {
+    grid-template-columns: 4.75rem minmax(0, 1fr);
+    grid-template-areas: "photo head" "icons icons" "main main";
+    column-gap: 1rem;
+    row-gap: .8rem;
+  }
+  .side { display: contents; }
+  .photo { grid-area: photo; border-radius: 12px; }
+  .icons { grid-area: icons; flex-direction: row; flex-wrap: wrap; gap: .4rem 1.1rem; }
+  .head { align-self: center; padding: 0; border: 0; }
+  .head h1 { font-size: 1.45rem; }
+  .role { font-size: .82rem; }
+  main { margin-top: .6rem; padding-top: 1.2rem; border-top: 1px solid var(--rule); }
+}
+
+/* ---------- small phones: year moves above the title, icons lose labels ---------- */
+@media (max-width: 480px) {
+  .entry { grid-template-columns: minmax(0, 1fr); }
+  .year { padding: 0; font-size: .74rem; }
+  .icons .lbl { display: none; }
+  .icons { gap: .4rem 1.25rem; }
+  .ico, .ico svg { width: 1.15rem; height: 1.15rem; }
+}

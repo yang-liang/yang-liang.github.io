@@ -1,0 +1,156 @@
+<div class="profile-container">
+    <div class="profile-left">
+        <div class="profile-image">
+            {{- with site.Params.profileMode }}
+            {{- if .imageUrl -}}
+                <img draggable="false" src="https://yang-liang.github.io/profile-color2.jpg" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}" height="{{ .imageHeight }}" width="{{ .imageWidth }}" />
+            {{- end }}
+            {{- end }}
+        </div>
+        <div class="social-section">
+            {{- partial "social_icons.html" -}}
+        </div>
+    </div>
+    <div class="profile-info">
+        <h1 class="profile-name">{{ site.Params.profileMode.title | default site.Title | markdownify }}</h1>
+        <span class="subtitle">{{ site.Params.profileMode.subtitle | markdownify }}</span>
+        <div class="current-positions">
+            <h2>Current Positions</h2>
+            <ul>
+                <li>Associate Professor and Graduate Co-director – <a href="https://economics.sdsu.edu/faculty">SDSU Economics</a></li>
+                <li>Associate Director – <a href="https://cheps.sdsu.edu">CHEPS</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="papers">
+    <h2>Working Papers</h2>
+    <div class="paper-list">
+        {{ range .Site.Params.workingPapers }}
+        <li class="paper-item">
+            <a href="{{ .url }}" class="paper-title">{{ .title }}</a>
+            <p class="paper-authors">
+                {{ .authors }}
+            </p>
+        </li>
+        {{ end }}
+    </div>
+</div>
+
+<div class="publications">
+    <h2>Accepted and Published Papers</h2>
+    <div class="publication-list">
+        {{ range .Site.Params.acceptedPublications }}
+         <div class="publication-item">
+            <a href="{{ .url }}" class="publication-title">{{ .title }}</a>
+            <p class="publication-authors"> {{ .authors }}</p>
+            <span class="journal-info">{{ .journal }}</span>, <span class="year-info">{{ .year }}</span>
+            <!-- Display Press Button next to the Year if Media Coverage is available -->
+            {{ if .mediaCoverage }}
+            <div class="dropdown inline-press-button">
+                <button class="dropdown-toggle" onclick="toggleDropdown('{{ .title | urlize }}-dropdown')">Press</button>
+                <div class="dropdown-content" id="{{ .title | urlize }}-dropdown" style="display: none;">
+                    {{ range .mediaCoverage }}
+                        <a href="{{ .url }}" class="media-link">{{ .name }}</a>
+                    {{ end }}
+                </div>
+            </div>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+</div>
+
+<div class="books">
+    <h2>Book Chapters, Policy Work, and Other Publications</h2>
+    <div class="book-list">
+        {{ range .Site.Params.bookChaptersPolicyWork }}
+        <div class="book-item">
+            <a href="{{ .url }}" class="book-title">{{ .title }}</a>
+            <p class="book-authors">{{ .authors }}</p>
+            <div class="publication-meta">
+                <span class="book-publication">{{ .publication }}</span><span class="year-separator">,</span> <span class="year-info">{{ .year }}</span>
+                {{ if .mediaCoverage }}
+                <span class="dropdown inline-press-button">
+                    <button class="dropdown-toggle" onclick="toggleDropdown('{{ .title | urlize }}-dropdown')">Press</button>
+                    <div class="dropdown-content" id="{{ .title | urlize }}-dropdown" style="display: none;">
+                        {{ range .mediaCoverage }}
+                            <a href="{{ .url }}" class="media-link">{{ .name }}</a>
+                        {{ end }}
+                    </div>
+                </span>
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</div>
+
+
+
+<script>
+    function toggleBio() {
+        const bioContent = document.getElementById('bioContent');
+        bioContent.style.display = bioContent.style.display === 'none' ? 'block' : 'none';
+    }
+</script>
+
+<script>
+    // Function to toggle the dropdown open/close
+    function toggleDropdown(id) {
+        const menu = document.getElementById(id);
+        const isVisible = menu.style.display === 'block';
+
+        // Close any other open dropdowns
+        closeAllDropdowns();
+
+        // Toggle the clicked dropdown's visibility
+        if (!isVisible) {
+            menu.style.display = 'block';
+        }
+    }
+
+    // Function to close all dropdowns
+    function closeAllDropdowns() {
+        const dropdowns = document.querySelectorAll('.dropdown-content');
+        dropdowns.forEach(dropdown => {
+            dropdown.style.display = 'none';
+        });
+    }
+
+    // Close the dropdown when clicking anywhere else on the page
+    document.addEventListener('click', function (event) {
+        // If the clicked element is not a dropdown or its child, close all dropdowns
+        if (!event.target.matches('.dropdown-toggle') && !event.target.closest('.dropdown-content')) {
+            closeAllDropdowns();
+        }
+    });
+</script>
+
+<!-- <div class="theme-toggle-container">
+    <button id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <svg id="theme-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" fill="currentColor"></path>
+        </svg>
+    </button>
+</div>
+
+
+<script>
+    // Function to toggle between light and dark theme
+    function toggleTheme() {
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+    }
+
+    // Set the initial theme on page load
+    (function() {
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+</script>
+
+ -->

@@ -1,0 +1,65 @@
+{{- /* Homepage: a standalone one-pager. Content lives in config.yml; styles in assets/css/site.css. */ -}}
+<!DOCTYPE html>
+<html lang="{{ site.Language }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ site.Title }}</title>
+<meta name="description" content="{{ site.Params.description }}">
+<meta name="author" content="{{ site.Params.author }}">
+<link rel="canonical" href="{{ .Permalink }}">
+<link rel="icon" href="{{ site.Params.assets.favicon | absURL }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ site.Params.assets.favicon16x16 | absURL }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ site.Params.assets.favicon32x32 | absURL }}">
+<link rel="apple-touch-icon" href="{{ site.Params.assets.apple_touch_icon | absURL }}">
+<meta property="og:title" content="{{ site.Title }}">
+<meta property="og:description" content="{{ site.Params.description }}">
+<meta property="og:image" content="{{ site.Params.profile.image | absURL }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;1,400&family=Libertinus+Sans:wght@400;700&display=swap">
+{{- $css := resources.Get "css/site.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{- if hugo.IsProduction }}
+{{ partial "analytics.html" . }}
+{{- end }}
+</head>
+<body>
+<div class="wrap">
+
+  <aside class="side">
+    <img class="photo" src="{{ site.Params.profile.image | relURL }}" alt="{{ site.Title }}" width="300" height="300">
+    <nav class="icons">
+      {{- range site.Params.socialIcons }}
+      <a href="{{ .url | safeURL }}" title="{{ .name }}"{{ if strings.HasPrefix .url "http" }} target="_blank" rel="noopener me"{{ end }}>
+        <span class="ico">{{ partial "svg.html" . }}</span><span class="lbl">{{ .label | default .name }}</span>
+      </a>
+      {{- end }}
+    </nav>
+  </aside>
+
+  <header class="head">
+    <h1>{{ site.Title }}</h1>
+    {{- range site.Params.profile.positions }}
+    <p class="role">{{ .title }}, <a href="{{ .url }}" target="_blank" rel="noopener">{{ .org }}</a></p>
+    {{- end }}
+  </header>
+
+  <main>
+    {{- partial "paper-list.html" (dict "heading" "Working Papers" "items" site.Params.workingPapers "showYear" false) }}
+    {{- partial "paper-list.html" (dict "heading" "Publications" "items" site.Params.acceptedPublications "showYear" true) }}
+    {{- partial "paper-list.html" (dict "heading" "Book Chapters, Policy Work, and Other Publications" "items" site.Params.bookChaptersPolicyWork "showYear" true) }}
+    <footer class="foot">&copy; {{ now.Year }} {{ site.Title }}</footer>
+  </main>
+
+</div>
+<script>
+  // Close any open Press list when clicking elsewhere or opening another one
+  document.addEventListener('click', function (e) {
+    document.querySelectorAll('details.press[open]').forEach(function (d) {
+      if (!d.contains(e.target)) d.removeAttribute('open');
+    });
+  });
+</script>
+</body>
+</html>

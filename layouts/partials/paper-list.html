@@ -1,0 +1,32 @@
+{{- /* One section of papers. Args: heading, items, showYear.
+       Each item may have: title, url, authors, journal or publication, year, code, mediaCoverage. */ -}}
+<section class="list{{ if not .showYear }} no-year{{ end }}">
+  <h2>{{ .heading }}</h2>
+  <ol>
+    {{- range .items }}
+    <li class="entry">
+      {{- if $.showYear }}<span class="year">{{ .year }}</span>{{ end }}
+      <div class="body">
+        <a class="title" href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a>
+        {{- with .authors }}<span class="authors">{{ . }}</span>{{ end }}
+        {{- $venue := .journal | default .publication }}
+        {{- if or $venue .code .mediaCoverage }}
+        <span class="line">
+          {{- with $venue }}<span class="venue">{{ . }}</span>{{ end }}
+          {{- if or .code .mediaCoverage }}
+          <span class="tags">
+            {{- with .code }}<a class="tag" href="{{ . }}" target="_blank" rel="noopener">Code</a>{{ end }}
+            {{- with .mediaCoverage }}
+            <details class="press"><summary>Press</summary><span class="outlets">
+              {{- range . }}<a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>{{ end -}}
+            </span></details>
+            {{- end }}
+          </span>
+          {{- end }}
+        </span>
+        {{- end }}
+      </div>
+    </li>
+    {{- end }}
+  </ol>
+</section>

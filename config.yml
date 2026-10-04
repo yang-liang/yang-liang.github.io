@@ -1,0 +1,292 @@
+baseURL: "https://yang-liang.github.io/"
+title: Yang Liang
+pagination:
+  pagerSize: 20
+theme: PaperMod
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+
+# One-pager: don't generate empty tag/category/RSS pages
+disableKinds: ["taxonomy", "term", "RSS"]
+
+# Pure one-pager mode: remove main menu items (previously Papers & Teaching)
+menu: {}
+
+params:
+  description: "Yang Liang's personal website"
+  author: Yang Liang
+  googleAnalyticsID: "G-CRZW4ME2DD"
+  DateFormat: "July 2025"
+  defaultTheme: light
+  hideFooter: false
+  disableThemeToggle: false
+  ShowShareButtons: false
+  ShowReadingTime: false
+  disableSpecial1stPost: true
+  disableAnchoredHeadings: true
+  ShowPostNavLinks: false
+  ShowBreadCrumbs: false
+  ShowCodeCopyButtons: true
+  ShowAllPagesInArchive: false
+  MainSections: ["research","teaching","misc."]
+  ShowToc: false
+  disableScrollToTop: true
+  TocOpen: true
+  ShowWordCount: false
+  UseHugoToc: true
+  comments: false
+  math: true
+  workingPapers:
+    - title: "Can Anti-Vaping Policies Curb Drinking Externalities? Evidence from E-Cigarette Taxation and Traffic Fatalities"
+      authors: "w. Dhaval M. Dave, Johanna Catherine Maclean, Joseph J. Sabia, and Matthew Braaksma"
+      year: 2025
+      url: "https://www.nber.org/papers/w30670"
+      mediaCoverage:
+        - name: "Economist"
+          url: "https://www.economist.com/united-states/2022/12/15/e-cigarette-taxes-may-reduce-teenage-drink-driving-deaths"
+
+    - title: "Robots and Crime"
+      authors: "w. Joseph J. Sabia and Dhaval M. Dave"
+      year: 2025
+      url: "https://www.nber.org/papers/w33603"
+
+    - title: "Do Vaping Taxes Tip the Scale? The Effect of E-Cigarette Taxation on Obesity"
+      authors: "w. Charles J. Courtemanche, Tessie Krishna, Joseph J. Sabia and Anthony Chuo"
+      year: 2025
+      url: "https://www.nber.org/papers/w33890"
+    
+    - title: "Are E-Cigarette Taxes Losing their Bite?"
+      authors: "w. Dhaval M. Dave, Tessie Krishna, and Joseph J. Sabia"
+      year: 2025
+      url: "https://www.nber.org/papers/w34544"
+      code: "https://github.com/yang-liang/ecigtax_DKLS"
+
+    - title: "Who Survived the U.S.-China Trade War? Evidence from Chinese Exporters"
+      authors: "w. Laura Connolly, Jiajun Lu, and Shuo Zhang"
+      year: 2026
+      url: "https://drive.google.com/file/d/1OVYbCTZRoTj3Nyz3zW9U9V8T15vTHsos/view"
+
+  acceptedPublications:
+    - title: "Follow Thy Neighbor: The Role of First Exporters"
+      authors: "w. Hao T. Fe and Mary E. Lovely"
+      journal: "Journal of Urban Economics"
+      year: 2025
+      url: "https://doi.org/10.1016/j.jue.2025.103813"
+
+    - title: "The Effect of E-Cigarette Flavor Restrictions on Tobacco Use"
+      authors: "w. Chad Cotti, Charles Courtemanche, Johanna Catherine Maclean, Erik Nesson, and Joseph J. Sabia"
+      journal: "Journal of Health Economics"
+      year: 2025
+      url: "https://doi.org/10.1016/j.jhealeco.2025.103013"
+
+    - title: "The Effect of E-cigarette Taxes on Substance Use"
+      authors: "w. Dhaval M. Dave, Johanna Catherine Maclean, Caterina Muratori, and Joseph J. Sabia"
+      journal: "Journal of Health Economics"
+      year: 2025
+      url: "https://doi.org/10.1016/j.jhealeco.2025.103022"
+
+    - title: "The Effects of Recreational Marijuana Legalization on Employment and Earnings"
+      authors: "w. Dhaval M. Dave, Caterina Muratori, and Joseph J. Sabia"
+      journal: "Journal of Population Economics"
+      year: 2025
+      url: "https://doi.org/10.1007/s00148-025-01100-8"
+      mediaCoverage:
+        - name: "Cato"
+          url: "https://www.cato.org/research-briefs-economic-policy/effects-recreational-marijuana-legalization-employment-earnings"
+        - name: "Business Insider"
+          url: "https://www.businessinsider.com/elon-musk-marijuana-productivity-helping-americans-better-jobs-wages-2023-1"
+        - name: "Marijuana Moment"
+          url: "https://www.marijuanamoment.net/marijuana-legalization-boosts-job-opportunities-in-the-agricultural-sector-study-finds/"
+        - name: "NORML"
+          url: "https://norml.org/marijuana/fact-sheets/marijuana-legalization-and-impact-on-the-workplace/"
+
+    - title: "Targeted Liberalization: China’s Foreign Investment Regulation Reform and Its Post-WTO-Accession Export Surge"
+      authors: "w. Mary E. Lovely and Hongsheng Zhang"
+      journal: "Review of International Economics"
+      year: 2025
+      url: "https://doi.org/10.1111/roie.12737"
+
+    - title: "Do E-Cigarette Retail Licensure Laws Reduce Tobacco Use?"
+      authors: "w. Charles Courtemanche, Johanna Catherine Maclean, Caterina Muratori, and Joseph J. Sabia"
+      journal: "Journal of Health Economics"
+      year: 2024
+      url: "https://doi.org/10.1016/j.jhealeco.2024.102919"      
+
+    - title: "Can Exports Be Pain Relievers? The Effect of Exports on Workplace Safety and Health"
+      authors: "w. Ling Li"
+      journal: "Review of International Economics"
+      year: 2024
+      url: "https://onlinelibrary.wiley.com/doi/full/10.1111/roie.12765"
+
+    - title: "Recreational Marijuana Laws and Teen Marijuana Use, 1993-2021"
+      authors: "w. D. Mark Anderson, Hao T. Fe, and Joseph J. Sabia"
+      journal: "JAMA Psychiatry"
+      year: 2024
+      url: "https://jamanetwork.com/journals/jamapsychiatry/fullarticle/2818043"
+      mediaCoverage:
+        - name: "Contemporary Pediatrics"
+          url: "https://www.contemporarypediatrics.com/view/marijuana-legalization-not-associated-with-encouraged-use-among-youth"
+        - name: "NORML"
+          url: "https://norml.org/blog/2024/04/26/jama-psychiatry-no-evidence-that-marijuana-legalization-laws-encourage-youth-use/"
+
+    - title: "Recreational Marijuana Legalization and Workplace Injuries Among Younger Workers"
+      authors: "w. Ling Li, Joseph J. Sabia, and Dhaval M. Dave"
+      journal: "JAMA Health Forum"
+      year: 2024
+      url: "https://jamanetwork.com/journals/jama-health-forum/fullarticle/2815242"
+      mediaCoverage:
+        - name: "U.S. News"
+          url: "https://www.usnews.com/news/health-news/articles/2024-02-23/young-workers-injuries-rise-after-recreational-marijuana-sales-made-legal"
+
+    - title: "Mandatory Seatbelt Laws and Traffic Fatalities: A Reassessment"
+      authors: "w. D. Mark Anderson and Joseph J. Sabia"
+      journal: "Journal of Applied Econometrics"
+      year: 2024
+      url: "https://doi.org/10.1002/jae.3026"
+      code: "https://journaldata.zbw.eu/dataset/mandatory-seatbelt-laws-and-traffic-fatalities-a-reassessment"
+
+    - title: "Have Recreational Marijuana Laws Undermined Public Health Progress on Adult Tobacco Use?"
+      authors: "w. Dhaval M. Dave, Michael F. Pesko, Serena Phillips, and Joseph J. Sabia"
+      journal: "Journal of Health Economics"
+      year: 2023
+      url: "https://doi.org/10.1016/j.jhealeco.2023.102756"
+      mediaCoverage:
+        - name: "MarketWatch"
+          url: "https://www.marketwatch.com/story/the-science-about-the-benefits-of-cannabis-is-limited-does-legalizing-marijuana-lead-to-an-increase-in-tobacco-use-11643652705?mod=article_inline"
+
+    - title: "Association Between State Antibullying Policies and Suicidal Behaviors Among Lesbian, Gay, Bisexual, and Questioning Youth"
+      authors: "w. Daniel I. Rees, Joseph J. Sabia, and Cooper Smiley"
+      journal: "JAMA Pediatrics"
+      year: 2023
+      mediaCoverage:
+        - name: "Medscape"
+          url: "https://medscape.com/article"
+      url: "https://jamanetwork.com/journals/jamapediatrics/article-abstract/2801965"
+
+    - title: "Job Creation and Job Destruction: The Effect of Trade Shocks on U.S. Manufacturing Employment"
+      authors: ""
+      journal: "The World Economy"
+      year: 2021
+      url: https://doi.org/10.1111/twec.13111
+
+    - title: "Offshoring, Exports, and Employment: Theory and Evidence from Korean Firms"
+      authors: "w. Priyaranjan Jha, Jae Yoon Lee, and Devashish Mitra"
+      journal: "The World Economy"
+      year: 2021
+      url: "https://doi.org/10.1111/twec.13133"
+
+    - title: "Economic Geography and Inequality in China: Did Improved Market Access Widen Spatial Wage Differences?"
+      authors: "w. Mary E. Lovely and Hongsheng Zhang"
+      journal: "China Economic Review"
+      year: 2019
+      url: "https://doi.org/10.1016/j.chieco.2019.01.005"
+  
+  bookChaptersPolicyWork:
+    - title: "Reflecting on the China Shock: A Decade of Learning and Assessment"
+      authors: ""
+      publication: "Elgar Encyclopedia of International Trade, Edward Elgar Publishing, pp. 166–172"
+      year: 2026
+      url: "https://www.e-elgar.com/shop/usd/elgar-encyclopedia-of-international-trade-9781035327492.html"
+
+    - title: "The Effects of Recreational Marijuana Legalization on Employment and Earnings"
+      authors: "w. Dhaval M. Dave, Cateria Muratori, and Joseph J. Sabia"
+      publication: "Research Briefs in Economics Policy NO. 347, CATO Institute"
+      year: 2023
+      url: "https://www.cato.org/research-briefs-economic-policy/effects-recreational-marijuana-legalization-employment-earnings"
+
+    - title: "Trump Tariffs Primarily Hit Multinational Supply Chains, Harm U.S. Technology Competitiveness"
+      authors: "w. Mary E. Lovely"
+      publication: "Policy Brief 18-12, Washington: Peterson Institute for International Economics"
+      year: 2018
+      url: "https://www.piie.com/publications/policy-briefs/trump-tariffs-primarily-hit-multinational-supply-chains-harm-us"
+      mediaCoverage:
+        - name: "Bloomberg"
+          url: "https://www.bloomberg.com/news/articles/2018-05-16/trump-tariffs-would-tax-u-s-firms-supply-chains-peterson-says"
+        - name: "Business Insider"
+          url: "https://www.businessinsider.com/why-trump-will-keep-losing-trade-wars-with-china-2018-5"
+        - name: "Forbes"
+          url: "https://www.forbes.com/sites/joeharpaz/2018/05/29/how-trumps-trade-war-will-spur-growth-of-ai/#1d5bc6855e00"
+        - name: "DisCo"
+          url: "https://project-disco.org/21st-century-trade/060118tariffs-pose-threat-to-u-s-tech-competitiveness-research-shows/#.WzFA4adKiM8"
+        - name: "The Economist"
+          url: "https://www.economist.com/finance-and-economics/2018/06/21/a-full-blown-trade-war-between-america-and-china-looks-likely"
+        - name: "NY Times"
+          url: "https://www.nytimes.com/2018/07/06/business/china-us-trade-war-trump-tariffs.html"
+
+    - title: "They Saved the Worst for Last: Why Trump's Impending December Tariffs on China Should Be Rolled Back"
+      authors: "w. Mary E. Lovely"
+      publication: "Trade and Investment Policy Watch, Washington: Peterson Institute for International Economics"
+      year: 2019
+      url: "https://www.piie.com/blogs/trade-and-investment-policy-watch/they-saved-worst-last-why-trumps-impending-december-tariffs"
+
+    - title: "State Enterprise Reform in China: Grasp or Release?"
+      authors: "w. Mary E. Lovely"
+      publication: "Wei-Chiao Huang and Huizhong Zhou (eds.), The Impact of China's Rise on the Pacific and the World, W.E. Upjohn Institute for Employment Research, Kalamazoo, MI"
+      year: 2018
+      url: "https://research.upjohn.org/up_bookchapters/929/"
+
+    - title: "¿Necesita México libre comercio con Estados Unidos?"
+      authors: "w. James Gerber"
+      publication: "Estudios Fronterizos"
+      year: 2022
+      url: "https://ref.uabc.mx/ojs/index.php/ref/article/view/1036"
+
+  # Homepage header: photo and positions (shown under the name)
+  profile:
+    image: "/profile.jpg"
+    positions:
+      - title: "Associate Professor and Co-Graduate Advisor"
+        org: "SDSU Economics"
+        url: "https://economics.sdsu.edu/faculty"
+      - title: "Associate Director"
+        org: "CHEPS"
+        url: "https://cheps.sdsu.edu"
+
+  # Left-column links; "name" picks the icon, "label" is the text shown
+  socialIcons:
+    - name: CV
+      label: Curriculum Vitae
+      url: cv_liang_sdsu.pdf
+    - name: Google Scholar
+      label: Scholar
+      url: "https://scholar.google.com/citations?user=BVCUJj4AAAAJ&hl=en&oi=ao"
+    - name: Email
+      url: "mailto:yliangecon@gmail.com"
+    - name: GitHub
+      url: "https://github.com/yang-liang"
+    - name: Bluesky
+      url: "https://bsky.app/profile/yangliang.bsky.social"
+    - name: X
+      url: "https://x.com/yangliangecon"
+
+  assets:
+    favicon: "/favicon.ico"
+    favicon16x16: "/favicon16.png"
+    favicon32x32: "/favicon32.png"
+    apple_touch_icon: "/apple-touch-icon.png"
+
+  cover:
+    hiddenInList: false
+    hiddenInSingle: true
+
+  label:
+    text: "Yang Liang"
+    icon: favicon.ico
+    iconHeight: 18
+
+  social:
+    twitter: ""
+    facebook_admin: ""
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    guessSyntax: true
+    style: autumn
+  tableOfContents:
+    endLevel: 2
+    ordered: false
+    startLevel: 2
