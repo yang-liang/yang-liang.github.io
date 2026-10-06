@@ -1,9 +1,10 @@
 {{- /* One section of papers. Args: heading, items, showYear.
-       Each item may have: title, url, authors, journal or publication, year, code, mediaCoverage. */ -}}
+       Sections with years are sorted newest first. Each item may have: title, url, authors, journal or publication, year, code, mediaCoverage. */ -}}
 <section class="list{{ if not .showYear }} no-year{{ end }}">
   <h2>{{ .heading }}</h2>
   <ol>
-    {{- range .items }}
+    {{- $items := .items }}{{ if .showYear }}{{ $items = sort .items "year" "desc" }}{{ end }}
+    {{- range $items }}
     <li class="entry">
       {{- if $.showYear }}<span class="year">{{ .year }}</span>{{ end }}
       <div class="body">
