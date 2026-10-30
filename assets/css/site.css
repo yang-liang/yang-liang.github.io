@@ -72,7 +72,7 @@ main { grid-area: main; display: grid; gap: 1.9rem; min-width: 0; }
 .line { display: flex; flex-wrap: wrap; align-items: baseline; gap: .1rem .5rem; font-size: .85rem; line-height: 1.3; }
 .venue { font-style: italic; }
 
-/* Code / Press tags */
+/* Code / Slides / Press tags */
 .tags { display: inline-flex; flex-wrap: wrap; align-items: baseline; gap: .1rem .4rem; font-family: var(--optima); font-size: .72rem; }
 .tag, .press summary { color: var(--link); border: 1px solid var(--rule); border-radius: 3px; padding: 0 .45rem; line-height: 1.45; letter-spacing: .02em; }
 .tag:hover, .press summary:hover, .press[open] summary { border-color: var(--link); text-decoration: none; }

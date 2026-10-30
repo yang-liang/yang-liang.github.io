@@ -1,5 +1,5 @@
 {{- /* One section of papers. Args: heading, items, showYear.
-       Sections with years are sorted newest first. Each item may have: title, url, authors, journal or publication, year, code, mediaCoverage. */ -}}
+       Sections with years are sorted newest first. Each item may have: title, url, authors, journal or publication, year, code, slides, mediaCoverage. */ -}}
 <section class="list{{ if not .showYear }} no-year{{ end }}">
   <h2>{{ .heading }}</h2>
   <ol>
@@ -11,12 +11,13 @@
         <a class="title" href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a>
         {{- with .authors }}<span class="authors">{{ . }}</span>{{ end }}
         {{- $venue := .journal | default .publication }}
-        {{- if or $venue .code .mediaCoverage }}
+        {{- if or $venue .code .slides .mediaCoverage }}
         <span class="line">
           {{- with $venue }}<span class="venue">{{ . }}</span>{{ end }}
-          {{- if or .code .mediaCoverage }}
+          {{- if or .code .slides .mediaCoverage }}
           <span class="tags">
             {{- with .code }}<a class="tag" href="{{ . }}" target="_blank" rel="noopener">Code</a>{{ end }}
+            {{- with .slides }}<a class="tag" href="{{ . | relURL }}" target="_blank" rel="noopener">Slides</a>{{ end }}
             {{- with .mediaCoverage }}
             <details class="press"><summary>Press</summary><span class="outlets">
               {{- range . }}<a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>{{ end -}}
