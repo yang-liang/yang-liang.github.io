@@ -145,7 +145,7 @@ params:
       journal: "Journal of Applied Econometrics"
       year: 2024
       url: "https://doi.org/10.1002/jae.3026"
-      code: "https://journaldata.zbw.eu/dataset/mandatory-seatbelt-laws-and-traffic-fatalities-a-reassessment"
+      code: "https://github.com/yang-liang/jae_seatbelt"
 
     - title: "Have Recreational Marijuana Laws Undermined Public Health Progress on Adult Tobacco Use?"
       authors: "w. Dhaval M. Dave, Michael F. Pesko, Serena Phillips, and Joseph J. Sabia"
